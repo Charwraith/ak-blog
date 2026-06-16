@@ -9,7 +9,7 @@ theme = "PaperMod"
 disablePathToLower = true
 
 [taxonomies]
-  pillar = "pillars"
+  pillar = "pillar"
   cluster = "clusters"
 
 [params]
@@ -23,6 +23,8 @@ disablePathToLower = true
   ShowCodeCopyButtons = true
   ShowRssButtonInSiteTerm = true
   disableSpecial1stPost = true
+  ShowToc = true
+  TocOpen = true
   mainSections = ["posts"]
   DateFormat = "2006-01-02"
 
@@ -30,6 +32,9 @@ disablePathToLower = true
     favicon = "/favicon.ico"
     disableScrollBarStyle = false
     disableFingerprinting = false
+
+  [params.authors]
+    default = "AKRMIO Team"
 
 [params.profileMode]
   enabled = false
@@ -71,8 +76,8 @@ disablePathToLower = true
     url = "/posts/"
     weight = 2
   [[menu.main]]
-    name = "标签"
-    url = "/tags/"
+    name = "主题"
+    url = "/pillar/"
     weight = 3
   [[menu.main]]
     name = "AKRMIO"

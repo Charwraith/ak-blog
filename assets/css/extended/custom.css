@@ -165,3 +165,113 @@ div.highlight {
 [data-theme="dark"] div.highlight {
     border: 1px solid var(--border);
 }
+
+/* =========================================================================
+   AKRMIO Pillar 主题视图 (/pillars/)
+   ========================================================================= */
+
+/* 4 个 Pillar 卡片网格 */
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin: 2rem 0;
+}
+
+.pillar-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--entry);
+    text-decoration: none !important;
+    color: var(--primary) !important;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pillar-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--akrmio-primary);
+    box-shadow: 0 6px 20px var(--akrmio-primary-soft);
+    text-decoration: none !important;
+}
+
+.pillar-card-icon {
+    font-size: 2.4rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.pillar-card-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.pillar-card-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 0.4rem 0;
+    color: var(--primary);
+}
+
+.pillar-card-desc {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    line-height: 1.5;
+    margin: 0 0 0.6rem 0;
+}
+
+.pillar-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.78rem;
+    color: var(--secondary);
+}
+
+.pillar-card-count {
+    background: var(--akrmio-primary-soft);
+    color: var(--akrmio-primary);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.pillar-card-slug {
+    font-family: var(--code-font-family, monospace);
+    font-size: 0.72rem;
+    opacity: 0.6;
+}
+
+/* 0 篇 pillar：禁用态 */
+.pillar-card-empty {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+.pillar-card-empty:hover {
+    transform: none;
+    border-color: var(--border);
+    box-shadow: none;
+}
+
+/* 单 Pillar 页面标题旁的文章数小标 */
+.pillar-page-count {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--secondary);
+    margin-left: 0.5rem;
+}
+
+/* 空状态 */
+.empty-state {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--secondary);
+    background: var(--entry);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    margin: 2rem 0;
+}
+

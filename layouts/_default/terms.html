@@ -1,0 +1,59 @@
+{{- /*
+  AKRMIO /pillars/ 主题列表页
+  显示所有 4 个 Pillar 卡片，每卡显示该 Pillar 的文章数
+  覆盖 PaperMod 默认 taxonomy.html / terms.html
+*/ -}}
+{{- define "main" }}
+
+{{- /*
+  pillar 元数据(PILLARS.md 同步):
+  slug | 中文名 | 描述 | 图标
+*/ -}}
+{{- $pillars := slice
+  (dict "slug" "deepseek-api"        "name" "DeepSeek API"        "desc" "DeepSeek 全系 API 接入、价格、迁移与最佳实践" "icon" "🐋")
+  (dict "slug" "minimax-api"     "name" "MiniMax API"     "desc" "MiniMax M 系列模型 API、长上下文与多模态评测"      "icon" "🪼")
+  (dict "slug" "llm-cost"            "name" "LLM 成本优化"            "desc" "LLM API 成本控制、计费策略、模型选型经济学"   "icon" "💰")
+  (dict "slug" "china-ai-outbound"   "name" "中国 AI 出海"            "desc" "中国大模型 API 的海外接入路径与合规"           "icon" "🌏")
+-}}
+
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}
+  <div class="post-description">{{ . | markdownify }}</div>
+  {{- end }}
+</header>
+
+<div class="pillars-grid">
+  {{- range $pillars }}
+    {{- $slug := .slug }}
+    {{- $count := len (where site.RegularPages "Params.pillar" $slug) }}
+    {{- if eq $count 0 }}
+  <div class="pillar-card pillar-card-empty" aria-disabled="true">
+    <div class="pillar-card-icon">{{ .icon }}</div>
+    <div class="pillar-card-body">
+      <h2 class="pillar-card-name">{{ .name }}</h2>
+      <p class="pillar-card-desc">{{ .desc }}</p>
+      <div class="pillar-card-meta">
+        <span class="pillar-card-count">{{ $count }} 篇</span>
+        <span class="pillar-card-slug">敬请期待</span>
+      </div>
+    </div>
+  </div>
+    {{- else }}
+  <a class="pillar-card" href="/pillar/{{ $slug }}/">
+    <div class="pillar-card-icon">{{ .icon }}</div>
+    <div class="pillar-card-body">
+      <h2 class="pillar-card-name">{{ .name }}</h2>
+      <p class="pillar-card-desc">{{ .desc }}</p>
+      <div class="pillar-card-meta">
+        <span class="pillar-card-count">{{ $count }} 篇</span>
+        <span class="pillar-card-slug">/{{ $slug }}/</span>
+      </div>
+    </div>
+  </a>
+    {{- end }}
+  {{- end }}
+</div>
+
+{{- end }}{{/* end main */ -}}

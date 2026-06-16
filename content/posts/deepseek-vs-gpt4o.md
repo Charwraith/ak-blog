@@ -1,11 +1,13 @@
 ---
-title: "GPT-4o vs DeepSeek API：深度对比"
+title: "GPT-4o vs DeepSeek API: An In-Depth Comparison"
+displayTitle: "GPT-4o vs DeepSeek API：深度对比"
 date: 2026-06-12T10:00:00+08:00
 draft: false
 pillar: deepseek-api
 clusters:
   - vs-gpt4o
   - pricing-analysis
+author: "AKRMIO Team"
 description: "从定价、能力、延迟三维度对比 GPT-4o 与 DeepSeek API"
 ---
 

@@ -1,11 +1,13 @@
 ---
-title: "DeepSeek API 完整指南"
+title: "DeepSeek API Complete Guide: Pricing, Setup, and Best Practices"
+displayTitle: "DeepSeek API 完整指南"
 date: 2026-06-10T08:00:00+08:00
 draft: false
 pillar: deepseek-api
 clusters:
   - vs-gpt4o
   - python-tutorial
+author: "AKRMIO Team"
 description: "深入解析 DeepSeek API 的调用方式与最佳实践"
 ---
 

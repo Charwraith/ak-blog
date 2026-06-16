@@ -1,17 +1,25 @@
 ---
-title: "MiniMax M3 完全指南: 10倍价格优势的 200K 长上下文模型"
+title: "MiniMax M3 Complete Guide: 200K Long Context at 1/10 the Cost"
+displayTitle: "MiniMax M3 完全指南"
 date: 2026-06-16T12:00:00+08:00
 draft: false
 pillar: minimax-api
 clusters:
   - model-review
   - pricing-analysis
+author: "AKRMIO Team"
 description: "MiniMax M3 实测：200K context + native multimodality，价格仅为 Claude/GPT 的 1/10，开发者最值得换的模型"
+image: "/images/posts/minimax-m3-guide/hero.jpg"
+cover:
+  image: "/images/posts/minimax-m3-guide/hero.jpg"
+  alt: "MiniMax M3 model illustration with neural network visualization"
 ---
 
 MiniMax M3 dropped on June 1, 2026, and the numbers are hard to ignore: a 1-million-token context window, native multimodality for text/image/video, and API pricing at 5-10% of what Claude Opus and GPT-5.5 charge. It is the first open-weights model to combine all three capabilities in a single system — the kind of thing that sounded impossible twelve months ago.
 
 If you build agentic coding tools, process large codebases, or burn through long-context API calls every month, this release changes your cost calculus. Here is what M3 actually does, how much it costs, where it falls short, and how to start using it today.
+
+![MiniMax M3 200K context window visualization](/images/posts/minimax-m3-guide/inline-1.jpg)
 
 ## What MiniMax M3 Is and Why It Matters
 
@@ -48,6 +56,8 @@ Let me put that into a concrete example. An agentic coding task that consumes 50
 At promo pricing, M3 runs the same workload at about 5% of the Opus cost. Even at standard pricing, it is roughly 10%. For teams running hundreds of agentic tasks daily, that is the difference between a sustainable product and an API bill that breaks the business model [Lushbinary].
 
 The promo price ($0.30/$1.20) is available for the first 7 days after launch, after which pricing moves to $0.60/$2.40. Subscription plans start at $20/month for ~1.7B tokens [VentureBeat].
+
+![MiniMax M3 API cost savings illustration](/images/posts/minimax-m3-guide/inline-2.jpg)
 
 ## Real-World Test: Long-Context Codebase Analysis
 

@@ -1,0 +1,59 @@
+{{- /*
+  AKRMIO /pillars/<slug>/ 单个 Pillar 页面
+  列出属于该 Pillar 的所有文章
+  覆盖 PaperMod 默认 taxonomy.html
+*/ -}}
+{{- define "main" }}
+
+{{- $pillarSlug := .Data.Term }}
+{{- $posts := where site.RegularPages "Params.pillar" $pillarSlug }}
+
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>
+    {{ .Title }}
+    <small class="pillar-page-count">· {{ len $posts }} 篇</small>
+  </h1>
+  {{- with .Description }}
+  <div class="post-description">{{ . | markdownify }}</div>
+  {{- end }}
+</header>
+
+{{- if eq (len $posts) 0 }}
+<div class="empty-state">
+  <p>📭 该 Pillar 还没有文章，敬请期待。</p>
+  <p><a href="/posts/">浏览所有文章 →</a></p>
+</div>
+{{- else }}
+
+<ul class="terms-tags" style="list-style:none;padding:0;display:grid;grid-template-columns:1fr;gap:1rem;">
+  {{- range $posts }}
+  <li>
+    <article class="post-entry">
+      {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
+      {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
+      <header class="entry-header">
+        <h2 class="entry-hint-parent">
+          {{- $show := .Params.displayTitle | default .Title -}}
+          {{ $show }}
+        </h2>
+      </header>
+      {{- if .Description }}
+      <div class="entry-content">
+        <p>{{ .Description | plainify | htmlUnescape }}</p>
+      </div>
+      {{- end }}
+      {{- if not (.Param "hideMeta") }}
+      <footer class="entry-footer">
+        {{- partial "post_meta.html" . -}}
+      </footer>
+      {{- end }}
+      <a class="entry-link" aria-label="post link to {{ $show | plainify }}" href="{{ .Permalink }}"></a>
+    </article>
+  </li>
+  {{- end }}
+</ul>
+
+{{- end }}
+
+{{- end }}{{/* end main */ -}}
