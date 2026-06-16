@@ -1,0 +1,8 @@
+{{/*
+  AKRMIO 扩展点：在文章正文后插入「相关文章」模块
+  PaperMod 主模板 single.html 调用此 partial
+*/}}
+
+{{- if and (eq .Section "posts") (.IsPage) -}}
+  {{- partial "related-posts.html" . -}}
+{{- end -}}

@@ -1,18 +1,80 @@
-baseURL = 'https://akrmio.com/'
+baseURL = 'https://akrmio.com/blog/'
 languageCode = 'zh-cn'
 title = 'AKRMIO Blog'
 publishDir = 'public'
 relativeURLs = false
 canonifyURLs = false
+theme = "PaperMod"
+
+disablePathToLower = true
 
 [taxonomies]
   pillar = "pillars"
   cluster = "clusters"
 
-[frontmatter]
-  [frontmatter.date]
-    lastModified = true
-  [frontmatter.expiryDate]
-    expired = false
+[params]
+  env = "production"
+  description = "AKRMIO Blog - AI API cost optimization & model guides for developers"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSiteTerm = true
+  disableSpecial1stPost = true
+  mainSections = ["posts"]
+  DateFormat = "2006-01-02"
 
-disablePathToLower = true
+  [params.assets]
+    favicon = "/favicon.ico"
+    disableScrollBarStyle = false
+    disableFingerprinting = false
+
+[params.profileMode]
+  enabled = false
+
+[params.homeInfoParams]
+  Title = "AKRMIO Blog"
+  Content = """
+  AI API 成本优化与模型选型实战指南。覆盖 DeepSeek、GPT-4o、Claude、MiniMax 等主流大模型 API，
+  帮你用更低成本跑出更高质量。
+
+  👉 [返回主站](https://akrmio.com/) · [文章列表](/posts/)
+  """
+
+[params.socialIcons]
+  # 暂时留空，等 GitHub/Twitter 账号就绪再加
+
+[params.cover]
+  hiddenInList = false
+  hiddenInSingle = false
+
+[markup.highlight]
+  noClasses = false
+  codeFences = true
+  guessSyntax = true
+  lineNos = true
+  style = "monokai"
+  tabWidth = 2
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "文章"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "标签"
+    url = "/tags/"
+    weight = 3
+  [[menu.main]]
+    name = "AKRMIO"
+    url = "https://akrmio.com/"
+    weight = 4

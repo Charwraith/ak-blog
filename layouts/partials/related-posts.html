@@ -1,22 +1,15 @@
-{{/*
-  相关文章内链模块
-  根据当前页面的 pillar（单值）和 clusters（多值）自动查找相关文章
-  参考：文烧 SEO 内链矩阵技术验证报告 §四
-*/}}
 {{ $current := . }}
 {{ $currentPillar := $current.Params.pillar }}
 {{ $currentClusters := $current.Params.clusters }}
-{{ $related := slice }}
+{{ $relatedPaths := slice }}
 
 {{ range where site.RegularPages "Section" "posts" }}
   {{ $page := . }}
   {{ if ne $page.RelPermalink $current.RelPermalink }}
     {{ $match := false }}
-    {{/* 同 pillar */}}
     {{ if and $currentPillar (eq $page.Params.pillar $currentPillar) }}
       {{ $match = true }}
     {{ end }}
-    {{/* 或同 cluster */}}
     {{ if not $match }}
       {{ with $currentClusters }}
         {{ range $currentClusters }}
@@ -30,17 +23,29 @@
       {{ end }}
     {{ end }}
     {{ if $match }}
-      {{ $related = $related | append $page }}
+      {{ $relatedPaths = $relatedPaths | append $page.Path }}
     {{ end }}
   {{ end }}
 {{ end }}
 
-{{ with first 8 $related }}
-<ul class="related-list">
-  {{ range . }}
-  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-  {{ end }}
-</ul>
-{{ else }}
-<p>暂无相关文章</p>
+{{ with first 6 $relatedPaths }}
+<section class="related-posts" aria-label="相关文章">
+  <h2>📚 相关文章</h2>
+  <ul>
+    {{ range . }}
+      {{ $p := site.GetPage . }}
+      {{ with $p }}
+      <li>
+        <a class="related-entry" href="{{ .RelPermalink }}">
+          <span class="related-title">{{ .Title }}</span>
+          <span class="related-meta">
+            🗓 {{ .PublishDate.Format "2006-01-02" }}
+            {{ with .Params.pillar }} · 🏷 {{ . }}{{ end }}
+          </span>
+        </a>
+      </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</section>
 {{ end }}

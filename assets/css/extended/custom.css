@@ -1,0 +1,167 @@
+/* =========================================================================
+   AKRMIO Blog - 品牌定制（活力橙）
+   覆盖 PaperMod 默认蓝色，强调色改为 #ff6b35（亮模式）/ #ff8c5a（暗模式）
+   ========================================================================= */
+
+:root {
+    /* 品牌主色 - 活力橙 */
+    --akrmio-primary: #ff6b35;
+    --akrmio-primary-soft: rgba(255, 107, 53, 0.12);
+    --akrmio-primary-hover: #ff5722;
+}
+
+[data-theme="dark"] {
+    --akrmio-primary: #ff8c5a;
+    --akrmio-primary-soft: rgba(255, 140, 90, 0.15);
+    --akrmio-primary-hover: #ffa07a;
+}
+
+/* --- 链接 & 强调 --- */
+.post-content a,
+.first-entry .entry-content a {
+    color: var(--akrmio-primary);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.post-content a:hover,
+.first-entry .entry-content a:hover {
+    color: var(--akrmio-primary-hover);
+    border-bottom-color: var(--akrmio-primary);
+}
+
+/* --- 文章卡片 hover 强调 --- */
+.post-entry {
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-entry:hover,
+.post-entry:focus-within {
+    border-color: var(--akrmio-primary);
+    box-shadow: 0 4px 16px var(--akrmio-primary-soft);
+}
+
+.first-entry:hover .entry-link,
+.post-entry:hover .entry-link {
+    background: var(--akrmio-primary-soft);
+}
+
+/* --- 标签页 / Logo / 当前菜单项 --- */
+.logo a:hover,
+.menu a:hover,
+.menu .active {
+    color: var(--akrmio-primary);
+}
+
+/* --- 阅读更多 / 分页按钮 --- */
+.read-more,
+.readmore {
+    color: var(--akrmio-primary);
+}
+
+.read-more:hover,
+.readmore:hover {
+    color: var(--akrmio-primary-hover);
+}
+
+.pagination a {
+    background: var(--akrmio-primary);
+}
+
+.pagination a:hover {
+    background: var(--akrmio-primary-hover);
+}
+
+/* --- 选中文本高亮 --- */
+::selection {
+    background: var(--akrmio-primary);
+    color: #fff;
+}
+
+/* --- 滚动条 --- */
+::-webkit-scrollbar-thumb {
+    background: var(--akrmio-primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--akrmio-primary-hover);
+}
+
+/* --- 首页标题 & 描述强调 --- */
+.home-info .entry-header h1 {
+    color: var(--akrmio-primary);
+}
+
+/* --- 相关文章卡片 --- */
+.related-posts {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+
+.related-posts h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--akrmio-primary);
+    border-left: 4px solid var(--akrmio-primary);
+    padding-left: 0.6rem;
+}
+
+.related-posts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.related-posts li {
+    margin: 0;
+}
+
+.related-posts .related-entry {
+    display: block;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--entry);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.related-posts .related-entry:hover {
+    transform: translateY(-2px);
+    border-color: var(--akrmio-primary);
+    box-shadow: 0 4px 16px var(--akrmio-primary-soft);
+    text-decoration: none;
+}
+
+.related-posts .related-entry .related-title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--primary);
+    margin-bottom: 0.4rem;
+    display: block;
+}
+
+.related-posts .related-entry .related-meta {
+    font-size: 0.8rem;
+    color: var(--secondary);
+    display: block;
+}
+
+.related-posts .related-entry:hover .related-title {
+    color: var(--akrmio-primary);
+}
+
+/* --- 代码块 monokai 主题微调（更协调） --- */
+div.highlight {
+    border-radius: var(--radius);
+}
+
+/* --- 暗色模式下代码块背景调整 --- */
+[data-theme="dark"] .post-content pre,
+[data-theme="dark"] div.highlight {
+    border: 1px solid var(--border);
+}
