@@ -1,6 +1,6 @@
 ---
 title: "MiniMax M3 Complete Guide: 200K Long Context at 1/10 the Cost"
-displayTitle: "MiniMax M3 完全指南"
+displayTitle: "MiniMax M3 完全指南：10 倍價格優勢的 200K 長上下文模型"
 date: 2026-06-16T12:00:00+08:00
 draft: false
 pillar: minimax-api

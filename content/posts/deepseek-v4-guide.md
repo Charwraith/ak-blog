@@ -1,6 +1,6 @@
 ---
 title: "DeepSeek V4 Complete Guide: 2026's Most Worth-Switching Open API"
-displayTitle: "DeepSeek V4 完全指南"
+displayTitle: "DeepSeek V4 完全指南：2026 年最值得接入的開源 API"
 date: 2026-06-16T14:00:00+08:00
 draft: false
 pillar: deepseek-api

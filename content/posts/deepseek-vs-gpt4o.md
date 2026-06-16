@@ -1,6 +1,6 @@
 ---
 title: "GPT-4o vs DeepSeek API: An In-Depth Comparison"
-displayTitle: "GPT-4o vs DeepSeek API：深度对比"
+displayTitle: "GPT-4o vs DeepSeek API：深度對比"
 date: 2026-06-12T10:00:00+08:00
 draft: false
 pillar: deepseek-api
