@@ -1,0 +1,16 @@
+{{ define "title" }}{{ .Title }}{{ end }}
+{{ define "main" }}
+<section class="posts-list">
+  <h1>{{ .Title }}</h1>
+  {{ range .Paginator.Pages }}
+  <article class="post-preview">
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <div class="meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+      {{ with .Params.pillar }}<span class="pillar-tag">{{ . }}</span>{{ end }}
+    </div>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+  </article>
+  {{ end }}
+</section>
+{{ end }}

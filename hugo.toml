@@ -1,0 +1,18 @@
+baseURL = 'https://akrmio.com/'
+languageCode = 'zh-cn'
+title = 'AKRMIO Blog'
+publishDir = 'public'
+relativeURLs = false
+canonifyURLs = false
+
+[taxonomies]
+  pillar = "pillars"
+  cluster = "clusters"
+
+[frontmatter]
+  [frontmatter.date]
+    lastModified = true
+  [frontmatter.expiryDate]
+    expired = false
+
+disablePathToLower = true
