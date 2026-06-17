@@ -41,6 +41,10 @@ disablePathToLower = true
       name = "AKRMIO"
       url = "https://akrmio.com/"
       weight = 4
+    [[languages.en.menu.main]]
+      name = "繁體中文"
+      url = "/zh-tw/"
+      weight = 5
 
   [languages.zh-tw]
     weight = 2
@@ -53,6 +57,23 @@ disablePathToLower = true
         Content = """AI API 成本優化與模型選型實戰指南。覆蓋 DeepSeek、GPT-4o、Claude、MiniMax 等主流大模型 API，幫你用更低成本跑出更高品質。
 
 👉 [返回主站](https://akrmio.com/) · [文章列表](/zh-tw/posts/)"""
+
+    [[languages.zh-tw.menu.main]]
+      name = "首頁"
+      url = "/zh-tw/"
+      weight = 1
+    [[languages.zh-tw.menu.main]]
+      name = "文章"
+      url = "/zh-tw/posts/"
+      weight = 2
+    [[languages.zh-tw.menu.main]]
+      name = "主題"
+      url = "/zh-tw/pillar/"
+      weight = 3
+    [[languages.zh-tw.menu.main]]
+      name = "English"
+      url = "/posts/"
+      weight = 4
 
 [params]
   env = "production"

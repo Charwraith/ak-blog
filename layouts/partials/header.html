@@ -111,4 +111,14 @@
             {{- end }}
         </ul>
     </nav>
+    <!-- language switcher -->
+    {{- if gt (len site.Languages) 1 -}}
+    <div class="lang-switcher">
+      {{- range site.Languages -}}
+        {{- if ne .Lang site.Language.Lang -}}
+        <a href="/{{ .Lang }}/" class="lang-link">{{ .LanguageName }}</a>
+        {{- end -}}
+      {{- end -}}
+    </div>
+    {{- end -}}
 </header>

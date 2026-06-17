@@ -275,3 +275,13 @@ div.highlight {
     margin: 2rem 0;
 }
 
+/* --- 语言切换器 --- */
+.lang-switcher {
+    display: inline-block;
+    margin-left: 1em;
+}
+.lang-link {
+    color: inherit;
+    padding: 0 0.5em;
+}
+
