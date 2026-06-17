@@ -109,7 +109,7 @@ You can override the default per-session using the `--model` flag in Claude Code
 
 Edit `~/.claude.json` (or create it if it does not exist):
 
-```json
+```text
 {
   "apiKey": "your-edgee-key-here",
   "baseURL": "https://api.edgee.dev/v1",
@@ -123,7 +123,7 @@ That is it. Three lines. Claude Code now routes through Edgee instead of Anthrop
 
 Run a simple Claude Code command to verify:
 
-```bash
+```text
 claude "write a Python function that returns the Fibonacci sequence"
 ```
 
