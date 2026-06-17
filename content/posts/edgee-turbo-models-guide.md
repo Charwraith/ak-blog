@@ -85,7 +85,7 @@ All four models score above 88% on MBPP. At this point, the basic coding benchma
 
 **The practical takeaway:** For routine Claude Code work — file edits, test writing, refactoring, API integration — Kimi K2.7 and MiniMax M2.7 deliver 88-92% of Claude Sonnet's quality at 5-10% of the cost. The tasks where Claude still wins (architectural decisions, complex debugging chains, security-critical code) are exactly the tasks where you would want to keep Claude on direct API anyway. Use Edgee for the 80% of high-volume work and route the critical 20% to Claude directly.
 
-For a deeper look at how these models compare on long-context workloads, our [MiniMax M3 guide](https://akrm.io/blog/minimax-m3-guide/) covers the 200K+ context angle in detail, and the [DeepSeek vs GPT-4o comparison](https://akrm.io/blog/deepseek-vs-gpt4o/) shows how DeepSeek V4 stacks up against another closed-source competitor. For teams building the API integration layer from scratch, the [DeepSeek API guide](https://akrm.io/blog/deepseek-api-guide/) walks through the full setup process.
+For a deeper look at how these models compare on long-context workloads, our [MiniMax M3 guide](https://akrmio.com/blog/posts/minimax-m3-guide/) covers the 200K+ context angle in detail, and the [DeepSeek vs GPT-4o comparison](https://akrmio.com/blog/posts/deepseek-vs-gpt4o/) shows how DeepSeek V4 stacks up against another closed-source competitor. For teams building the API integration layer from scratch, the [DeepSeek API guide](https://akrmio.com/blog/posts/deepseek-api-guide/) walks through the full setup process.
 
 ## 5-Step Setup: Switch Claude Code to Edgee Turbo Models
 
