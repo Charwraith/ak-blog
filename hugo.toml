@@ -126,6 +126,7 @@ disablePathToLower = true
 [params]
   env = "production"
   description = "AKRMIO Blog - AI API cost optimization & model guides for developers"
+  keywords = ["AI API", "DeepSeek", "MiniMax M3", "Claude", "GPT-4o", "LLM cost", "AI coding", "Ralph Loop", "model review"]
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowShareButtons = true
@@ -147,11 +148,18 @@ disablePathToLower = true
   [params.authors]
     default = "AKRMIO Team"
 
+[outputFormats]
+  [outputFormats.RSS]
+    mediatype = "application/rss+xml"
+    baseName = "index"
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
 [params.profileMode]
   enabled = false
-
-[params.socialIcons]
-  # 暂时留空，等 GitHub/Twitter 账号就绪再加
 
 [params.cover]
   hiddenInList = false
