@@ -75,6 +75,54 @@ disablePathToLower = true
       url = "/posts/"
       weight = 4
 
+[languages.fr]
+  weight = 3
+  languageName = "Français"
+  contentDir = "content.fr"
+  [languages.fr.params]
+    description = "AKRMIO Blog - Version française"
+    [languages.fr.params.homeInfoParams]
+      Title = "AKRMIO Blog"
+      Content = """Guides d'optimisation des coûts d'API IA et de sélection de modèles pour développeurs.
+
+👉 [Retour au site principal](https://akrmio.com/) · [Articles](/fr/posts/)"""
+
+[languages.ru]
+  weight = 4
+  languageName = "Русский"
+  contentDir = "content.ru"
+  [languages.ru.params]
+    description = "AKRMIO Blog - Русская версия"
+    [languages.ru.params.homeInfoParams]
+      Title = "AKRMIO Blog"
+      Content = """Руководства по оптимизации затрат на AI API и выбору моделей для разработчиков.
+
+👉 [Вернуться на главный сайт](https://akrmio.com/) · [Статьи](/ru/posts/)"""
+
+[languages.ja]
+  weight = 5
+  languageName = "日本語"
+  contentDir = "content.ja"
+  [languages.ja.params]
+    description = "AKRMIO Blog - 日本語版"
+    [languages.ja.params.homeInfoParams]
+      Title = "AKRMIO Blog"
+      Content = """開発者向け AI API コスト最適化 & モデル選択ガイド。
+
+👉 [メインサイトに戻る](https://akrmio.com/) · [記事一覧](/ja/posts/)"""
+
+[languages.vi]
+  weight = 6
+  languageName = "Tiếng Việt"
+  contentDir = "content.vi"
+  [languages.vi.params]
+    description = "AKRMIO Blog - Phiên bản Tiếng Việt"
+    [languages.vi.params.homeInfoParams]
+      Title = "AKRMIO Blog"
+      Content = """Hướng dẫn tối ưu hóa chi phí API AI & lựa chọn mô hình cho nhà phát triển.
+
+👉 [Quay lại trang chính](https://akrmio.com/) · [Bài viết](/vi/posts/)"""
+
 [params]
   env = "production"
   description = "AKRMIO Blog - AI API cost optimization & model guides for developers"
