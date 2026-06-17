@@ -1,5 +1,7 @@
 baseURL = 'https://akrmio.com/blog/'
-languageCode = 'zh-cn'
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = false
+languageCode = 'en'
 title = 'AKRMIO Blog'
 publishDir = 'public'
 relativeURLs = false
@@ -11,6 +13,46 @@ disablePathToLower = true
 [taxonomies]
   pillar = "pillar"
   cluster = "clusters"
+
+[languages]
+  [languages.en]
+    weight = 1
+    languageName = "English"
+    contentDir = "content"
+    [languages.en.params]
+      [languages.en.params.homeInfoParams]
+        Title = "AKRMIO Blog"
+        Content = """AI API cost optimization & model selection guides for developers. Covering DeepSeek, GPT-4o, Claude, MiniMax and other major LLM APIs — helping you run higher quality at lower cost.
+
+👉 [Back to main site](https://akrmio.com/) · [Articles](/posts/)"""
+    [[languages.en.menu.main]]
+      name = "Home"
+      url = "/"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "Articles"
+      url = "/posts/"
+      weight = 2
+    [[languages.en.menu.main]]
+      name = "Topics"
+      url = "/pillar/"
+      weight = 3
+    [[languages.en.menu.main]]
+      name = "AKRMIO"
+      url = "https://akrmio.com/"
+      weight = 4
+
+  [languages.zh-tw]
+    weight = 2
+    languageName = "繁體中文"
+    contentDir = "content.zh-tw"
+    [languages.zh-tw.params]
+      description = "AKRMIO Blog 繁體中文版"
+      [languages.zh-tw.params.homeInfoParams]
+        Title = "AKRMIO Blog"
+        Content = """AI API 成本優化與模型選型實戰指南。覆蓋 DeepSeek、GPT-4o、Claude、MiniMax 等主流大模型 API，幫你用更低成本跑出更高品質。
+
+👉 [返回主站](https://akrmio.com/) · [文章列表](/zh-tw/posts/)"""
 
 [params]
   env = "production"
@@ -38,15 +80,6 @@ disablePathToLower = true
 
 [params.profileMode]
   enabled = false
-
-[params.homeInfoParams]
-  Title = "AKRMIO Blog"
-  Content = """
-  AI API 成本优化与模型选型实战指南。覆盖 DeepSeek、GPT-4o、Claude、MiniMax 等主流大模型 API，
-  帮你用更低成本跑出更高质量。
-
-  👉 [返回主站](https://akrmio.com/) · [文章列表](/posts/)
-  """
 
 [params.socialIcons]
   # 暂时留空，等 GitHub/Twitter 账号就绪再加
