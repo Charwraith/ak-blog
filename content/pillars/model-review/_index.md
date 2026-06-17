@@ -15,6 +15,8 @@ pillar: model-review
 - **[Qwen3.6-35B-A3B 評測](/blog/posts/qwen-36-35b-a3b/)** — 35B 總參 / 3B 激活的 MoE 架構，SWE-bench 73.4% / Terminal-Bench 51.5%，262K 上下文。
 - **[GPT-4o vs DeepSeek 深度對比](/blog/posts/deepseek-vs-gpt4o/)** — 能力、成本、延遲、context window 四維度完整對照表。
 - **[Edgee Turbo Models](/blog/posts/edgee-turbo-models-guide/)** — Claude Code 無縫切換 Kimi K2.7 / MiniMax M2.7 的中轉方案。
+- **[Gemma 4 評測](/blog/posts/gemma-4/)** — Google DeepMind Apache 2.0 開源、4 變體覆蓋 2B-31B、31B 全球開源第 3。對 DeepSeek V4 / Qwen3.6 的真實衝擊。
+- **[LLM API Pricing 2026](/blog/posts/llm-pricing-2026/)** — 所有主流模型按每百萬 token 真實成本排名，模型路由 + 上下文壓縮可節省 70-85%。
 
 ## 2026 年選型決策樹
 
