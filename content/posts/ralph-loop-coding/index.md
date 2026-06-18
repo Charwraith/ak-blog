@@ -1,7 +1,7 @@
 ---
 title: "Ralph Loop: The Autonomous AI Coding Paradigm That Actually Works in 2026"
 displayTitle: "Ralph Loop 完全指南：2026 年真正能落地的自主 AI 編碼範式"
-date: 2026-06-18T08:00:00+08:00
+date: 2026-06-17T08:00:00+08:00
 draft: false
 pillar: china-ai-outbound
 clusters:

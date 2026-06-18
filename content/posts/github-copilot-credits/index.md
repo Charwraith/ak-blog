@@ -1,7 +1,7 @@
 ---
 title: "GitHub Copilot AI Credits: The End of Premium Requests and What It Means for Your Team's Bill"
 displayTitle: "GitHub Copilot AI Credits 時代來臨：Premium Request 退場，你的帳單會怎麼變？"
-date: 2026-06-18T08:30:00+08:00
+date: 2026-06-17T08:30:00+08:00
 draft: false
 pillar: llm-cost
 clusters:

@@ -1,7 +1,7 @@
 ---
 title: "Microsoft 2026 Work Trend Index: Why 67% of AI Impact Comes from Org Culture, Not Individual Skills"
 displayTitle: "Microsoft 2026 Work Trend Index 解析:為什麼 67% 的 AI 影響來自組織文化,不是個人能力?"
-date: 2026-06-18T09:30:00+08:00
+date: 2026-06-17T09:30:00+08:00
 draft: false
 pillar: china-ai-outbound
 clusters:

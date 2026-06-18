@@ -1,7 +1,7 @@
 ---
 title: "Qwen3.6-35B-A3B: Why Alibaba's 3B-Active MoE is the First Real Threat to Closed Coding Models"
 displayTitle: "Qwen3.6-35B-A3B 評測：阿里開源 MoE 為何是閉源編碼模型的第一個真正威脅？"
-date: 2026-06-18T09:00:00+08:00
+date: 2026-06-17T09:00:00+08:00
 draft: false
 pillar: china-ai-outbound
 clusters:

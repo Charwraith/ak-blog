@@ -1,7 +1,7 @@
 ---
 title: "When AI Builds Itself: What Anthropic's 80% Code Revelation Means for Every Developer in 2026"
 displayTitle: "AI 開始自己寫自己：Anthropic 自曝 80% 程式碼由 Claude 產出，遞迴自我改進時代正式降臨"
-date: 2026-06-18T11:00:00+08:00
+date: 2026-06-17T11:00:00+08:00
 draft: false
 pillar: china-ai-outbound
 clusters:
