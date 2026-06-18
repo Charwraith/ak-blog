@@ -14,7 +14,8 @@
   .akrmio-hero {
     min-height: 92vh;
     display: flex; align-items: center; justify-content: center;
-    background: linear-gradient(180deg, #fff 0%, #fff5ef 100%);
+    background: linear-gradient(180deg, #fff 0%, #fff5ef 100%), url('/images/v1/hero-bg.png') center/cover no-repeat;
+    background-blend-mode: normal;
     color: #1a1a1a;
     padding: 6rem 1.5rem 4rem;
     text-align: center;
@@ -71,6 +72,46 @@
     box-shadow: 0 12px 32px rgba(255,107,53,0.5);
   }
 
+  .akrmio-cta-row {
+    display: inline-flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center;
+  }
+  .akrmio-cta-secondary {
+    display: inline-block;
+    padding: 1.05rem 2.4rem; font-size: 1.05rem; font-weight: 600;
+    background: transparent; color: var(--akrmio-primary);
+    border: 2px solid var(--akrmio-primary);
+    border-radius: 12px;
+    text-decoration: none !important;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  }
+  .akrmio-cta-secondary:hover {
+    background: var(--akrmio-primary); color: #fff;
+    transform: translateY(-2px);
+  }
+
+  .akrmio-cta-tier {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.85rem 2.2rem; font-size: 1rem; font-weight: 700;
+    background: var(--akrmio-primary); color: #fff;
+    border-radius: 10px;
+    text-decoration: none !important;
+    box-shadow: 0 4px 16px rgba(255,107,53,0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+  .akrmio-cta-tier:hover {
+    background: var(--akrmio-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255,107,53,0.45);
+  }
+  .akrmio-cta-tier.akrmio-cta-tier-outline {
+    background: transparent; color: var(--akrmio-primary);
+    border: 2px solid var(--akrmio-primary); box-shadow: none;
+  }
+  .akrmio-cta-tier.akrmio-cta-tier-outline:hover {
+    background: var(--akrmio-primary); color: #fff;
+  }
+
   .akrmio-scroll-hint {
     margin-top: 4rem; font-size: 0.78rem; letter-spacing: 0.3em; text-transform: uppercase;
     color: #999;
@@ -93,7 +134,7 @@
   .akrmio-pricing-inner { max-width: 1200px; margin: 0 auto; }
 
   .akrmio-tier {
-    display: grid; grid-template-columns: auto 1fr; gap: 3rem; align-items: start;
+    display: grid; grid-template-columns: auto minmax(0, 1.1fr) minmax(0, 1.4fr); gap: 1.5rem 2.5rem; align-items: center;
   }
   .akrmio-tier-num {
     font-size: clamp(3rem, 8vw, 6.5rem);
@@ -102,6 +143,16 @@
     font-feature-settings: "tnum" 1;
     letter-spacing: -0.04em;
   }
+  .akrmio-tier-image {
+    border-radius: 16px; overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    aspect-ratio: 1 / 1;
+    background: #f3f3f3;
+  }
+  .akrmio-tier-image img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  [data-theme="dark"] .akrmio-tier-image { background: #2a2a2a; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
   .akrmio-tier-body { min-width: 0; }
   .akrmio-tier-name {
     font-size: clamp(1.8rem, 3vw, 2.6rem);
@@ -187,6 +238,7 @@
     .akrmio-hero { min-height: 80vh; padding: 4rem 1rem 3rem; }
     .akrmio-tier { grid-template-columns: 1fr; gap: 1rem; }
     .akrmio-tier-num { font-size: 4rem; }
+    .akrmio-tier-image { max-width: 360px; margin: 0 auto; }
     .akrmio-pricing, .akrmio-how { padding: 4rem 1rem; }
   }
 
@@ -204,34 +256,37 @@
   <section class="akrmio-hero">
     <div class="akrmio-hero-inner">
       <div class="akrmio-keywords" id="akrmio-keywords">
-        <span class="akrmio-keyword">中转 API</span>
-        <span class="akrmio-keyword">稳定可靠</span>
-        <span class="akrmio-keyword">价格透明</span>
-        <span class="akrmio-keyword">按量计费</span>
-        <span class="akrmio-keyword">毫秒响应</span>
+        <span class="akrmio-keyword">便宜</span>
+        <span class="akrmio-keyword">openai</span>
+        <span class="akrmio-keyword">claude</span>
+        <span class="akrmio-keyword">gpt</span>
+        <span class="akrmio-keyword">api</span>
+        <span class="akrmio-keyword">中转</span>
+        <span class="akrmio-keyword">稳定</span>
+        <span class="akrmio-keyword">全球</span>
         <span class="akrmio-keyword">多模型</span>
-        <span class="akrmio-keyword">智能路由</span>
-        <span class="akrmio-keyword">7×24</span>
-        <span class="akrmio-keyword">99.9% SLA</span>
-        <span class="akrmio-keyword">高并发</span>
-        <span class="akrmio-keyword">OpenAI 兼容</span>
-        <span class="akrmio-keyword">Claude</span>
-        <span class="akrmio-keyword">GPT-4o</span>
-        <span class="akrmio-keyword">DeepSeek</span>
-        <span class="akrmio-keyword">Qwen</span>
-        <span class="akrmio-keyword">企业级</span>
-        <span class="akrmio-keyword">私有部署</span>
-        <span class="akrmio-keyword">一键接入</span>
+        <span class="akrmio-keyword">agent</span>
+        <span class="akrmio-keyword">hermes</span>
+        <span class="akrmio-keyword">openclaw</span>
+        <span class="akrmio-keyword">按量付费</span>
+        <span class="akrmio-keyword">订阅</span>
+        <span class="akrmio-keyword">sdk</span>
+        <span class="akrmio-keyword">无锁定</span>
+        <span class="akrmio-keyword">tokens</span>
+        <span class="akrmio-keyword">账单</span>
       </div>
 
       <h1 class="akrmio-title">
         最便宜的<br><span class="akrmio-accent">中转 API 服务</span>
       </h1>
       <p class="akrmio-subtitle">
-        覆盖 GPT / Claude / DeepSeek / Qwen 等主流大模型 · 比海外直连便宜 70%+ · 99.9% SLA
+        新 NewAPI · 一站式大模型 API 聚合与中转平台 · 100+ 模型按量计费
       </p>
 
-      <a href="#pricing-001" class="akrmio-cta-primary">立即试用</a>
+      <div class="akrmio-cta-row">
+        <a href="https://akrmio-b.akrmio.com" class="akrmio-cta-primary">立即试用</a>
+        <a href="#pricing-001" class="akrmio-cta-secondary">查看定价</a>
+      </div>
 
       <div class="akrmio-scroll-hint">向下滚动</div>
     </div>
@@ -242,21 +297,25 @@
     <div class="akrmio-pricing-inner akrmio-fade">
       <div class="akrmio-tier">
         <div class="akrmio-tier-num">001</div>
+        <div class="akrmio-tier-image">
+          <img src="/images/v1/pricing-1-entry.png" alt="001 入门版" loading="lazy">
+        </div>
         <div class="akrmio-tier-body">
-          <h2 class="akrmio-tier-name">X1 入门版</h2>
+          <h2 class="akrmio-tier-name">入门版</h2>
           <div class="akrmio-tier-price">
             <span class="amount">$X1</span><span class="period">/月</span>
           </div>
           <p class="akrmio-tier-tagline">比海外直连便宜 70%+</p>
           <p class="akrmio-tier-desc">
-            适合个人开发者和试用场景，OpenAI 兼容协议，5 分钟接入。
+            适合个人开发者和小型项目
           </p>
           <ul class="akrmio-tier-features">
-            <li>100 万 tokens / 月</li>
-            <li>3 个主流模型</li>
-            <li>邮件技术支持</li>
-            <li>OpenAI 兼容 API</li>
+            <li>100+ 模型</li>
+            <li>按量计费</li>
+            <li>稳定 API</li>
+            <li>无锁定</li>
           </ul>
+          <a href="https://akrmio-b.akrmio.com" class="akrmio-cta-tier">选择方案</a>
         </div>
       </div>
     </div>
@@ -267,21 +326,25 @@
     <div class="akrmio-pricing-inner akrmio-fade">
       <div class="akrmio-tier">
         <div class="akrmio-tier-num">002</div>
+        <div class="akrmio-tier-image">
+          <img src="/images/v1/pricing-2-standard.png" alt="002 标准版" loading="lazy">
+        </div>
         <div class="akrmio-tier-body">
-          <h2 class="akrmio-tier-name">X2 标准版</h2>
+          <h2 class="akrmio-tier-name">标准版</h2>
           <div class="akrmio-tier-price">
             <span class="amount">$X2</span><span class="period">/月</span>
           </div>
-          <p class="akrmio-tier-tagline">中型项目的主力档位</p>
+          <p class="akrmio-tier-tagline">更高额度 + 更快速度</p>
           <p class="akrmio-tier-desc">
-            适合生产环境的中小型应用，10 个模型自由切换，智能路由自动选最优路径。
+            适合中小型团队和生产环境
           </p>
           <ul class="akrmio-tier-features">
-            <li>1000 万 tokens / 月</li>
-            <li>10 个主流模型</li>
-            <li>工单优先支持</li>
-            <li>智能路由 + 自动重试</li>
+            <li>100+ 模型</li>
+            <li>更高 RPM</li>
+            <li>优先支持</li>
+            <li>无锁定</li>
           </ul>
+          <a href="https://akrmio-b.akrmio.com" class="akrmio-cta-tier">选择方案</a>
         </div>
       </div>
     </div>
@@ -292,6 +355,9 @@
     <div class="akrmio-pricing-inner akrmio-fade">
       <div class="akrmio-tier">
         <div class="akrmio-tier-num">003</div>
+        <div class="akrmio-tier-image">
+          <img src="/images/v1/pricing-3-pro.png" alt="003 专业版" loading="lazy">
+        </div>
         <div class="akrmio-tier-body">
           <h2 class="akrmio-tier-name">Y1 专业版</h2>
           <div class="akrmio-tier-price">
@@ -317,6 +383,9 @@
     <div class="akrmio-pricing-inner akrmio-fade">
       <div class="akrmio-tier">
         <div class="akrmio-tier-num">004</div>
+        <div class="akrmio-tier-image">
+          <img src="/images/v1/pricing-4-enterprise.png" alt="004 企业版" loading="lazy">
+        </div>
         <div class="akrmio-tier-body">
           <h2 class="akrmio-tier-name">Y2 企业版</h2>
           <div class="akrmio-tier-price">
