@@ -275,6 +275,46 @@ div.highlight {
     margin: 2rem 0;
 }
 
+/* =========================================================================
+   AKRMIO v1 zh-cn 简体 landing page 重设计 (2026-06-18)
+   风格参考 synapserstudio（18 关键词 / 大标题 / 4 段编号 / 短描述）
+   UI 框架 / 编号体系 / 文字 / 子项全部按 akrmio 业务重写，非侵权
+   ========================================================================= */
+
+/* 落地页全局：覆盖 PaperMod 默认的 .main 间距 */
+.akrmio-landing {
+    /* 与 PaperMod .main 容器宽度对齐 */
+    width: 100%;
+}
+
+/* 暗色模式下落地页文字色修正 */
+[data-theme="dark"] .akrmio-landing h1,
+[data-theme="dark"] .akrmio-landing h2 {
+    color: #fafafa;
+}
+
+/* 落地页 CTA 按钮聚焦态（无障碍） */
+.akrmio-cta-primary:focus-visible {
+    outline: 3px solid rgba(255, 107, 53, 0.5);
+    outline-offset: 4px;
+}
+
+/* 落地页链接 hover 不下划线（CTA 风格） */
+.akrmio-cta-primary:hover,
+.akrmio-foot a:hover {
+    text-decoration: none !important;
+}
+
+/* 移动端字体自适应 */
+@media (max-width: 720px) {
+    .akrmio-landing h1 { font-size: clamp(2.2rem, 9vw, 3.5rem) !important; }
+    .akrmio-landing h2 { font-size: clamp(1.5rem, 5vw, 2rem) !important; }
+    .akrmio-landing .akrmio-tier-features { grid-template-columns: 1fr; }
+}
+
+/* 落地页隐藏首页 hero 的小标题（避免重复） */
+body.list .akrmio-landing .home-info { display: none; }
+
 /* --- 语言切换器 --- */
 .lang-switcher {
     display: inline-block;
@@ -283,5 +323,11 @@ div.highlight {
 .lang-link {
     color: inherit;
     padding: 0 0.5em;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+.lang-link:hover {
+    opacity: 1;
+    color: var(--akrmio-primary);
 }
 
